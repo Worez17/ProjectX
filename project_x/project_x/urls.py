@@ -20,6 +20,8 @@ from django.conf.urls import url
 from . import search
 
 urlpatterns = [
-    url(r'^search$', search.search),
     url(r'^search-form$', search.search_form),
+    url(r'^search-commodity$', search.search_commodity),
+    url(r'^search-comment$', search.search_comment),
+    url(r'^phrase$', search.phrase),
 ]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评论分词</title>
+</head>
+
+ <script type="text/javascript">
+     function referrer1(){
+         window.location.href=document.referrer;
+     }
+ </script>
+
+<body>
+    {% for item in data%}
+        {% if forloop.counter  == 1 %}
+            <button onclick="referrer1()">返回上一页</button>
+            <br>
+        {% endif %}
+        {{ item  }}&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if forloop.counter  == 1 %}
+            <br><br> <font style="line-height:2;">
+        {% endif %}
+        {%  if forloop.counter|divisibleby:8 %}
+            <br>
+        {% endif %}
+    {% endfor %}
+    </font>
+</body>
+
+</html>

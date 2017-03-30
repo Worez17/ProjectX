@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comment</title>
+</head>
+<body>
+    {% for item in data%}
+        <p>
+            <form action = "/phrase" method = 'get'>
+                {{ item  }}
+                <input type = "hidden" name = "comment"  value = {{ item  }} >
+                <br>
+                <input type="submit" value="分词">
+            </form>
+        </p>
+    {% endfor %}
+</body>
+</html>
